@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pitch Visualizer</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+
+    #ui {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-family: sans-serif;
+      padding: 10px;
+      border-radius: 6px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    #ui label {
+      display: block;
+      margin: 4px 0;
+    }
+
+    #toggleBtn {
+      margin-top: 10px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      background: #00ffff;
+      color: #000;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #toggleBtn:hover {
+      background: #00dddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <strong>Pitch Types:</strong><br/>
+    <div id="pitchCheckboxes"></div>
+    <button id="toggleBtn">Pause</button>
+  </div>
+  <canvas id="three-canvas"></canvas>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
